@@ -9,7 +9,7 @@
     <name>TT Police Service</name>
 
     <description>
-        Information on the Trinidad and Tobago Police Service.
+        Information on the Trinidad and Tobago Police Service Stations.
     </description>
 
     <author href="http://www.referencelogic.com/" email="mobile@referencelogic.com">
@@ -21,6 +21,7 @@
         The "device" permission is required for the 'deviceready' event.
     -->
     <feature name="http://api.phonegap.com/1.0/device" />
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>    
 
     <!--
         If you do not want any permissions to be added to your app, add the
