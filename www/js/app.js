@@ -46,6 +46,16 @@ function init() {
       'OK,Cancel');
     }, true);     
 
+
+  Hammer(document.getElementById('main')).on("swipeleft", function(event) { $.ui.loadContent("#stations"); });
+  Hammer(document.getElementById('main')).on("swiperight", function(event) { $.ui.loadContent("#about",false,true,"slide"); });
+    
+  Hammer(document.getElementById('stations')).on("swipeleft", function(event) { $.ui.loadContent("#about"); });
+  Hammer(document.getElementById('stations')).on("swiperight", function(event) { $.ui.loadContent("#main",false,true,"slide"); });
+
+  Hammer(document.getElementById('about')).on("swipeleft", function(event) { $.ui.loadContent("#main"); });
+  Hammer(document.getElementById('about')).on("swiperight", function(event) { $.ui.loadContent("#stations",false,true,"slide"); });
+    
   map = new OpenLayers.Map("map");
   var mapnik         = new OpenLayers.Layer.OSM();
   var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
